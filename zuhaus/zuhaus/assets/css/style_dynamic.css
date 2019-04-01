@@ -1,0 +1,90 @@
+/* generated in /www/wp-content/themes/zuhaus/zuhaus/assets/custom-styles/general-custom-styles.php zuhaus_mikado_h1_styles function */
+h1 { font-family: Arial;text-transform: none;}
+
+/* generated in /www/wp-content/themes/zuhaus/zuhaus/assets/custom-styles/general-custom-styles.php zuhaus_mikado_h2_styles function */
+h2 { font-family: Arial;}
+
+/* generated in /www/wp-content/themes/zuhaus/zuhaus/assets/custom-styles/general-custom-styles.php zuhaus_mikado_h3_styles function */
+h3 { font-family: Arial;}
+
+/* generated in /www/wp-content/themes/zuhaus/zuhaus/assets/custom-styles/general-custom-styles.php zuhaus_mikado_h4_styles function */
+h4 { font-family: Arial;}
+
+/* generated in /www/wp-content/themes/zuhaus/zuhaus/assets/custom-styles/general-custom-styles.php zuhaus_mikado_h5_styles function */
+h5 { font-family: Arial;}
+
+/* generated in /www/wp-content/themes/zuhaus/zuhaus/assets/custom-styles/general-custom-styles.php zuhaus_mikado_text_styles function */
+p { font-family: Arial;}
+
+/* generated in /www/wp-content/themes/zuhaus/zuhaus/framework/modules/contactform7/custom-styles/contact-form.php zuhaus_mikado_contact_form7_text_styles_1 function */
+.cf7_custom_style_1 input.wpcf7-form-control.wpcf7-text, .cf7_custom_style_1 input.wpcf7-form-control.wpcf7-number, .cf7_custom_style_1 input.wpcf7-form-control.wpcf7-date, .cf7_custom_style_1 textarea.wpcf7-form-control.wpcf7-textarea, .cf7_custom_style_1 select.wpcf7-form-control.wpcf7-select, .cf7_custom_style_1 input.wpcf7-form-control.wpcf7-quiz { color: #9c9c9c;font-size: 13px;border-color: rgba(225, 225, 225, 1);}
+
+/* generated in /www/wp-content/themes/zuhaus/zuhaus/framework/modules/contactform7/custom-styles/contact-form.php zuhaus_mikado_contact_form7_focus_styles_1 function */
+.cf7_custom_style_1 input.wpcf7-form-control.wpcf7-text:focus, .cf7_custom_style_1 input.wpcf7-form-control.wpcf7-number:focus, .cf7_custom_style_1 input.wpcf7-form-control.wpcf7-date:focus, .cf7_custom_style_1 textarea.wpcf7-form-control.wpcf7-textarea:focus, .cf7_custom_style_1 select.wpcf7-form-control.wpcf7-select:focus, .cf7_custom_style_1 input.wpcf7-form-control.wpcf7-quiz:focus { color: #9c9c9c;}
+
+/* generated in /www/wp-content/themes/zuhaus/zuhaus/framework/modules/contactform7/custom-styles/contact-form.php zuhaus_mikado_contact_form7_label_styles_1 function */
+.cf7_custom_style_1 p { color: #9c9c9c;font-size: 13px;}
+
+/* generated in /www/wp-content/themes/zuhaus/zuhaus/framework/modules/contactform7/custom-styles/contact-form.php zuhaus_mikado_contact_form7_text_styles_2 function */
+.cf7_custom_style_2 input.wpcf7-form-control.wpcf7-text, .cf7_custom_style_2 input.wpcf7-form-control.wpcf7-number, .cf7_custom_style_2 input.wpcf7-form-control.wpcf7-date, .cf7_custom_style_2 textarea.wpcf7-form-control.wpcf7-textarea, .cf7_custom_style_2 select.wpcf7-form-control.wpcf7-select, .cf7_custom_style_2 input.wpcf7-form-control.wpcf7-quiz { padding-top: 20px;padding-bottom: 18px;}
+
+/* generated in /www/wp-content/themes/zuhaus/zuhaus/framework/modules/contactform7/custom-styles/contact-form.php zuhaus_mikado_contact_form7_button_styles_2 function */
+.cf7_custom_style_2 input.wpcf7-form-control.wpcf7-submit { padding-top: 0;padding-bottom: 0;height: 40px;line-height: 40px;}
+
+/* generated in /www/wp-content/themes/zuhaus/zuhaus/framework/modules/error404/custom-styles/custom-styles.php zuhaus_mikado_404_page_general_styles function */
+.mkdf-404-page .mkdf-content { background-image: url(https://cbrhome.flywheelstaging.com/wp-content/uploads/2017/11/error-page-background-img.jpg);background-position: center 0;background-size: cover;background-repeat: no-repeat;}
+
+/* generated in /www/wp-content/themes/zuhaus/zuhaus/framework/modules/error404/custom-styles/custom-styles.php zuhaus_mikado_404_title_styles function */
+.mkdf-404-page .mkdf-page-not-found .mkdf-404-title { color: #ffffff;}
+
+/* generated in /www/wp-content/themes/zuhaus/zuhaus/framework/modules/error404/custom-styles/custom-styles.php zuhaus_mikado_404_subtitle_styles function */
+.mkdf-404-page .mkdf-page-not-found .mkdf-404-subtitle { color: #ffffff;}
+
+/* generated in /www/wp-content/themes/zuhaus/zuhaus/framework/modules/error404/custom-styles/custom-styles.php zuhaus_mikado_404_text_styles function */
+.mkdf-404-page .mkdf-page-not-found .mkdf-404-text { color: #ffffff;}
+
+/* generated in /www/wp-content/themes/zuhaus/zuhaus/framework/modules/footer/admin/custom-styles/footer-custom-styles.php zuhaus_mikado_footer_top_general_styles function */
+.mkdf-page-footer .mkdf-footer-top-holder { background-color: #121212;}
+
+/* generated in /www/wp-content/themes/zuhaus/zuhaus/framework/modules/header/types/mobile-header/admin/custom-styles/mobile-header-custom-styles.php zuhaus_mikado_mobile_header_general_styles function */
+.mkdf-mobile-header .mkdf-mobile-header-inner { background-color: #0a0a0a;}
+
+/* generated in /www/wp-content/themes/zuhaus/zuhaus/framework/modules/header/types/mobile-header/admin/custom-styles/mobile-header-custom-styles.php zuhaus_mikado_mobile_navigation_styles function */
+.mkdf-mobile-header .mkdf-mobile-nav .mkdf-grid > ul > li > a, .mkdf-mobile-header .mkdf-mobile-nav .mkdf-grid > ul > li > h6 { color: #0a0a0a;}
+
+/* generated in /www/wp-content/themes/zuhaus/zuhaus/framework/modules/header/types/mobile-header/admin/custom-styles/mobile-header-custom-styles.php zuhaus_mikado_mobile_navigation_styles function */
+.mkdf-mobile-header .mkdf-mobile-nav .mkdf-grid > ul > li.mkdf-active-item > a, .mkdf-mobile-header .mkdf-mobile-nav .mkdf-grid > ul > li.mkdf-active-item > h6, .mkdf-mobile-header .mkdf-mobile-nav .mkdf-grid > ul > li > a:hover, .mkdf-mobile-header .mkdf-mobile-nav .mkdf-grid > ul > li > h6:hover { color: #ffcc00;}
+
+/* generated in /www/wp-content/themes/zuhaus/zuhaus/framework/modules/header/types/mobile-header/admin/custom-styles/mobile-header-custom-styles.php zuhaus_mikado_mobile_navigation_styles function */
+.mkdf-mobile-header .mkdf-mobile-nav ul ul li a, .mkdf-mobile-header .mkdf-mobile-nav ul ul li h6 { color: #0a0a0a;}
+
+/* generated in /www/wp-content/themes/zuhaus/zuhaus/framework/modules/header/types/mobile-header/admin/custom-styles/mobile-header-custom-styles.php zuhaus_mikado_mobile_navigation_styles function */
+.mkdf-mobile-header .mkdf-mobile-nav ul ul li.current-menu-ancestor > a, .mkdf-mobile-header .mkdf-mobile-nav ul ul li.current-menu-item > a, .mkdf-mobile-header .mkdf-mobile-nav ul ul li.current-menu-ancestor > h6, .mkdf-mobile-header .mkdf-mobile-nav ul ul li.current-menu-item > h6, .mkdf-mobile-header .mkdf-mobile-nav ul ul li a:hover, .mkdf-mobile-header .mkdf-mobile-nav ul ul li h6:hover { color: #ffffff;}
+
+/* generated in /www/wp-content/themes/zuhaus/zuhaus/framework/modules/header/types/mobile-header/admin/custom-styles/mobile-header-custom-styles.php zuhaus_mikado_mobile_icon_styles function */
+.mkdf-mobile-header .mkdf-mobile-menu-opener a { color: #ffffff;}
+
+/* generated in /www/wp-content/themes/zuhaus/zuhaus/framework/modules/header/types/mobile-header/admin/custom-styles/mobile-header-custom-styles.php zuhaus_mikado_mobile_icon_styles function */
+.mkdf-mobile-header .mkdf-mobile-menu-opener a:hover, .mkdf-mobile-header .mkdf-mobile-menu-opener.mkdf-mobile-menu-opened a { color: #ffffff;}
+
+/* generated in /www/wp-content/themes/zuhaus/zuhaus/framework/modules/header/types/sticky-header/admin/custom-styles/sticky-header-custom-styles.php zuhaus_mikado_sticky_header_styles function */
+.mkdf-page-header .mkdf-sticky-header .mkdf-sticky-holder { background-color: rgba(18, 18, 18, 1);}
+
+/* generated in /www/wp-content/themes/zuhaus/zuhaus/framework/modules/header/types/sticky-header/admin/custom-styles/sticky-header-custom-styles.php zuhaus_mikado_sticky_header_styles function */
+.mkdf-main-menu.mkdf-sticky-nav > ul > li:hover > a, .mkdf-main-menu.mkdf-sticky-nav > ul > li.mkdf-active-item > a { color: #ffffff;}
+
+/* generated in /www/wp-content/themes/zuhaus/zuhaus/framework/modules/header/types/top-header/admin/custom-styles/top-header-custom-styles.php zuhaus_mikado_header_top_bar_styles function */
+.mkdf-top-bar-background { height: 91px;}
+
+/* generated in /www/wp-content/themes/zuhaus/zuhaus/framework/modules/header/admin/custom-styles/header-custom-styles.php zuhaus_mikado_header_menu_area_styles function */
+.mkdf-page-header .mkdf-menu-area { background-color: rgba(18, 18, 18, 1);}
+
+/* generated in /www/wp-content/themes/zuhaus/zuhaus/framework/modules/header/admin/custom-styles/header-custom-styles.php zuhaus_mikado_main_menu_styles function */
+.mkdf-drop-down .narrow .second .inner ul, .mkdf-drop-down .wide .second .inner { background-color: rgba(18, 18, 18, 1);}
+
+/* generated in /www/wp-content/themes/zuhaus/zuhaus/framework/modules/title/types/breadcrumbs/admin/custom-styles/breadcrumbs-title-custom-styles.php zuhaus_mikado_breadcrumbs_title_area_typography_style function */
+.mkdf-title-holder .mkdf-title-wrapper .mkdf-breadcrumbs { color: #ffffff;font-family: Hind;font-size: 18px;font-weight: 400;}
+
+/* generated in /www/wp-content/themes/zuhaus/zuhaus/framework/modules/title/admin/custom-styles/title-custom-styles.php zuhaus_mikado_title_area_typography_style function */
+.mkdf-title-holder .mkdf-title-wrapper .mkdf-page-subtitle { font-family: Arial;}
+
