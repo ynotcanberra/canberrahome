@@ -1,0 +1,126 @@
+/* ==========================================================================
+   Property Search shortcode style - begin
+   ========================================================================== */
+
+.mkdf-property-search-holder {
+
+    .mkdf-search-type-section {
+        .mkdf-property-type-list-holder {
+            width: 85%;
+            margin: 0 auto;
+            .mkdf-ptl-item {
+                .mkdf-ptl-item-image {
+                    @include mkdfTransition(transform 0.15s ease-out);
+                    @include mkdfTransform(translateY(0));
+                }
+                &.active {
+                    .mkdf-ptl-item-image {
+                        @include mkdfTransform(translateY(-5px));
+                    }
+                    .mkdf-ptl-item-title {
+                        color: $first-main-color;
+                    }
+                }
+
+                .mkdf-ptl-item-inner {
+                    &:hover {
+                        .mkdf-ptl-item-image {
+                            @include mkdfTransform(translateY(-5px));
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .mkdf-search-bottom {
+        @include mkdfTableLayout();
+    }
+
+    .select2-container--default {
+        .select2-selection--single {
+            color: $default-text-color;
+            .select2-selection__rendered {
+                padding: 0 40px;
+            }
+            .select2-selection__arrow {
+                border-left: 0;
+            }
+        }
+    }
+
+    .mkdf-search-property-icon {
+        position: absolute;
+        top: 32px;
+        left: 15px;
+        font-size: 20px;
+    }
+
+    .mkdf-search-bottom-part {
+        @include mkdfTableCellLayout();
+        vertical-align: bottom;
+        padding-right: 10px;
+        &:last-child {
+            padding-right: 0;
+        }
+
+        label,
+        .mkdf-btn {
+            width: 100%;
+        }
+        .mkdf-btn {
+            margin-bottom: 14px;
+        }
+        .select2 {
+            display: inline-block;
+            width: 100% !important;
+        }
+    }
+    .mkdf-search-city-section,
+    .mkdf-search-status-section {
+        width: 40%;
+        @include ipad-landscape {
+            width: 33.33%;
+        }
+        @include phone-landscape {
+            width: 100%;
+            display: block;
+            margin-bottom: 10px;
+        }
+    }
+    .mkdf-search-button-section {
+        width: 20%;
+        @include ipad-landscape {
+            width: 33.33%;
+        }
+        @include phone-landscape {
+            display: block;
+            width: 100%;
+        }
+    }
+
+    &.mkdf-light-skin {
+        .mkdf-search-bottom {
+            label,
+            .mkdf-search-property-icon,
+            .select2-container--default .select2-selection--single .select2-selection__arrow {
+                color: #fff;
+            }
+
+            .select2-container--default .select2-selection--single {
+                border-color: #fff;
+                color: #fff;
+            }
+
+            .mkdf-btn {
+                &:hover {
+                    color: #fff !important;
+                }
+            }
+
+        }
+    }
+}
+/* ==========================================================================
+   Property Slider shortcode style - end
+   ========================================================================== */

@@ -711,3 +711,26 @@ if ( ! function_exists( 'zuhaus_mikado_max_image_width_srcset' ) ) {
 	
 	add_filter( 'max_srcset_image_width', 'zuhaus_mikado_max_image_width_srcset' );
 }
+
+// remove version from head
+remove_action('wp_head', 'wp_generator');
+
+// remove version from rss
+add_filter('the_generator', '__return_empty_string');
+
+// remove version from scripts and styles
+function shapeSpace_remove_version_scripts_styles($src) {
+	if (strpos($src, 'ver=')) {
+		$src = remove_query_arg('ver', $src);
+	}
+	return $src;
+}
+add_filter('style_loader_src', 'shapeSpace_remove_version_scripts_styles', 9999);
+add_filter('script_loader_src', 'shapeSpace_remove_version_scripts_styles', 9999);
+
+
+function replace_text($text) {
+	$text = str_replace('no posts matched', 'no property matched', $text);
+	return $text;
+}
+add_filter('the_content', 'replace_text');

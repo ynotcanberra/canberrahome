@@ -1,0 +1,31 @@
+.widget {
+    &.mkdf-add-property-widget {
+        aside.mkdf-sidebar &,
+        .wpb_widgetised_column & {
+            border: 0;
+            padding: 0;
+        }
+        .mkdf-top-bar & {
+            display: inline-block;
+        }
+        .mkdf-btn {
+            text-transform: none;
+            padding: 7px 14px 3px 20px;
+            font-size: 12px;
+            > span {
+                &:not(.mkdf-btn-text) {
+                    font-size: 20px;
+                    vertical-align: top;
+                }
+            }
+            .mkdf-menu-area &,
+            .mkdf-top-bar & {
+                color: #fff;
+                &:hover {
+                    background-color: transparent !important;
+                    color: $second-main-color !important;
+                }
+            }
+        }
+    }
+}

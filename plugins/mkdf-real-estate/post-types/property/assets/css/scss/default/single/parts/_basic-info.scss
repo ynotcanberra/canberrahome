@@ -1,0 +1,65 @@
+/* Basic info section start */
+.mkdf-property-basic-info-holder {
+    border-bottom: 1px solid $default-border-color;
+    box-sizing: border-box;
+    padding: 26px 0;
+
+    .mkdf-property-basic-info-inner {
+        @include mkdfTableLayout();
+    }
+
+    .mkdf-property-price {
+        @include mkdfTableCellLayout();
+        width: 15%;
+        padding: 5px 15px 0 0;
+        font-size: 36px;
+        font-weight: 600;
+        color: $first-main-color;
+        font-family: $default-heading-font;
+    }
+
+    .mkdf-property-param {
+        @include mkdfTableCellLayout();
+        width: 15%;
+        border-left: 1px solid $default-border-color;
+        padding: 0 15px;
+
+        .mkdf-property-icon {
+            width: 32px;
+            display: inline-block;
+            vertical-align: middle;
+            img {
+                vertical-align: middle;
+            }
+        }
+        .mkdf-property-content {
+            display: inline-block;
+            vertical-align: middle;
+            width: calc(100% - 42px);
+            box-sizing: border-box;
+            padding-left: 10px;
+            font-size: 13px;
+            line-height: 1.5em;
+        }
+        .mkdf-property-label {
+            display: block;
+            font-weight: 300;
+        }
+        .mkdf-property-value {
+            display: block;
+            font-weight: 600;
+            color: $default-heading-color;
+        }
+    }
+
+    .mkdf-property-cta {
+        @include mkdfTableCellLayout();
+        width: 25%;
+        text-align: center;
+        padding-left: 23px;
+        .mkdf-btn {
+            width: 100%;
+        }
+    }
+}
+/* Basic info section end */

@@ -1,0 +1,29 @@
+.mkdf-property-list-holder {
+    &.mkdf-pl-active-filter-hidden {
+        &.mkdf-pl-type-set {
+            .mkdf-property-list-filter-part {
+                .mkdf-section-status {
+                    width: 100%;
+                    .select2 {
+                        width: 50% !important;
+                    }
+                }
+            }
+        }
+    }
+
+    .mkdf-filter-status-holder {
+        position: relative;
+        .mkdf-filter-property-icon {
+            position: absolute;
+            top: 0;
+            left: 0;
+            font-size: 20px;
+            display: inline-block;
+            height: 42px;
+            line-height: 42px;
+            width: 40px;
+            text-align: center;
+        }
+    }
+}

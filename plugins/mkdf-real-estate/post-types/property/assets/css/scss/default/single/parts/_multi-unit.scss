@@ -1,0 +1,29 @@
+/* Tags section start */
+.mkdf-property-multi-unit {
+    .mkdf-property-multi-unit-items {
+        @include ipad-portrait {
+            overflow-x: auto;
+        }
+        thead td {
+            font-weight: 700;
+            font-family: $default-heading-font;
+            color: $default-heading-color;
+        }
+
+        td {
+            padding: 10px;
+        }
+    }
+
+    table {
+        border-collapse: initial;
+        @include mkdfBorderRadius(3px);
+        border: 1px solid $default-border-color;
+        border-bottom: none;
+
+        td {
+            border-bottom: 1px solid $default-border-color;
+        }
+    }
+}
+/* Tags section end */

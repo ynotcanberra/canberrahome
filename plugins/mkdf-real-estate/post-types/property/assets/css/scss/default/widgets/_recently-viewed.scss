@@ -1,0 +1,25 @@
+.widget {
+    &.mkdf-recently-viewed-property-widget {
+        .mkdf-widget-title-holder {
+            display: block;
+            border-bottom: 1px solid $default-border-color;
+            padding: 18px 14px 11px;
+        }
+
+        .mkdf-property-list-holder {
+            padding: 18px 14px;
+            box-sizing: border-box;
+        }
+
+        article {
+            &:last-child {
+                margin: 0;
+            }
+            &:hover {
+                .mkdf-pli-title a {
+                    color: $first-main-color;
+                }
+            }
+        }
+    }
+}

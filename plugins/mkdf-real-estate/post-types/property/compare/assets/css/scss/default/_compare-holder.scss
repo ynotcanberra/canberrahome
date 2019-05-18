@@ -1,0 +1,100 @@
+.mkdf-re-compare-holder {
+    position: fixed;
+    top: 0;
+    right: -365px;
+    width: 365px;
+    height: 100%;
+    min-height: 100%;
+    padding: 62px 45px 36px;
+    background-color: #fff;
+    text-align: left;
+    overflow: visible;
+    visibility: hidden;
+    z-index:1990;
+    -webkit-backface-visibility: hidden;
+    box-sizing: border-box;
+    box-shadow: -3px 0 3px rgba(0, 0, 0, 0.04);
+    @include mkdfTransition(all .6s cubic-bezier(.77,0,.175,1));
+
+    .mkdf-re-compare-holder-scroll {
+        display: inline-block;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        max-height: 100%;
+        padding-bottom: 50px;
+        box-sizing: border-box;
+    }
+    
+    .mkdf-re-compare-actions {
+        margin-top: 15px;
+        .mkdf-btn {
+            &:first-child {
+                margin-right: 10px;
+            }
+        }
+    }
+}
+
+.mkdf-re-compare-holder-opener {
+    position: absolute;
+    top: 50%;
+    @include mkdfTransform(translateY(-50%) rotate(-90deg));
+    left: -90px;
+    display: inline-block;
+    width: auto;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 40px;
+    font-family: $default-heading-font;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    font-weight: 400;
+    background-color: #000;
+    color: #fff;
+    z-index: 1000;
+    text-align: center;
+    visibility: visible;
+    @include mkdfTransition(left 0.2s ease-out);
+
+    .mkdf-compare-empty & {
+        left: 0;
+    }
+
+    &:hover {
+        color: #fff;
+    }
+}
+
+.mkdf-re-ch-slide-from-right {
+
+    &.mkdf-re-ch-opened {
+
+        .mkdf-wrapper {
+
+            .mkdf-cover {
+                z-index: 3000;
+            }
+        }
+
+        .mkdf-re-compare-holder {
+            right: 0;
+            visibility: visible;
+        }
+    }
+
+    .mkdf-wrapper {
+
+        .mkdf-cover {
+            z-index: -1;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            opacity: 0;
+        }
+    }
+}

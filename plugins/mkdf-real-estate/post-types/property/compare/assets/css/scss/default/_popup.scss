@@ -1,0 +1,212 @@
+.mkdf-re-compare-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    background-color: rgba(#222222, 0.9);
+    padding: 75px;
+    visibility:hidden;
+    opacity: 0;
+    z-index: 1001;
+    @include mkdfTransition(opacity 0.2s ease-out, visibility 0.2s ease-out);
+
+    &.mkdf-re-popup-opened {
+        visibility:visible;
+        opacity: 1;
+    }
+
+    .mkdf-re-compare-popup-close {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        display: inline-block;
+        width: 25px;
+        height: 25px;
+        line-height: 25px;
+        font-size: 25px;
+        color: $default-heading-color;
+        z-index: 20;
+        text-align: center;
+    }
+
+    .mkdf-re-popup-outer,
+    .mkdf-re-popup-inner,
+    .mkdf-re-popup-items-holder {
+        @include mkdfRelativeHolderLayout();
+        height: 100%;
+        overflow: hidden;
+    }
+
+    .mkdf-re-popup-outer {
+        padding: 40px 55px;
+        box-sizing: border-box;
+        background-color: #fff;
+        overflow: hidden;
+    }
+
+    #mkdf-re-popup-items {
+        list-style: none;
+        margin: 0;
+        position: relative;
+        max-height: 100%;
+        &.mkdf-with-opacity {
+            opacity: 0.5;
+        }
+        li {
+            display: flex;
+            line-height: 21px;
+            transition: 0.3s;
+            border: 1px solid $default-border-color;
+            border-bottom: 0;
+            &:first-child {
+                border: 0;
+                > div {
+                    margin-bottom: 43px;
+                }
+            }
+            &:last-of-type {
+                border-bottom: 1px solid $default-border-color;
+            }
+            
+            &.mkdf-re-info-holder {
+                > div {
+                    line-height: 1;
+                    &:first-child {
+                        font-weight: 500;
+                    }
+                }
+            }
+
+            > div {
+                flex: 1;
+                padding: 15px;
+                color: $default-text-color;
+                text-align: center;
+                
+                &:last-child {
+                    margin-bottom: 0;
+                }
+                &.mkdf-with-opacity {
+                    opacity: 0.5;
+                }
+    
+                .mkdf-item-top-section {
+                    position: relative;
+                }
+    
+                .mkdf-ci-image {
+                    line-height: 0;
+                    overflow: hidden;
+        
+                    img {
+                        @include mkdfTransform(scale(1));
+                        @include mkdfTransition(transform 0.3s ease-out);
+                        backface-visibility: hidden;
+                        width: 100%;
+                        max-width: 100%;
+                    }
+                }
+                .mkdf-item-top-section-content {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    display: inline-block;
+                    width: 100%;
+                    height: 100%;
+                    box-sizing: border-box;
+                    padding: 0;
+                }
+                .mkdf-item-top-section-content-inner {
+                    @include mkdfTableLayout();
+                }
+                .mkdf-item-info-top {
+                    @include mkdfTableCellLayout();
+                    vertical-align: top;
+                }
+    
+                .mkdf-re-add-to-compare {
+                    display: inline-block;
+                    position: absolute;
+                    right: 18px;
+                    top: 18px;
+                    z-index: 10;
+                    color: #fff;
+                    font-size: 14px;
+                    width: 24px;
+                    height: 24px;
+                    line-height: 29px;
+                    text-align: center;
+                    background-color: rgba(#000, 0.6);
+                    @include mkdfBorderRadius(3px);
+                    > * {
+                        margin-left: -1px;
+                    }
+                }
+    
+                .mkdf-ci-statuses {
+                    color: #fff;
+                    background-color: rgba(0, 0, 0, 0.6);
+                    padding: 1px 8px 0;
+                    box-sizing: border-box;
+                    @include mkdfBorderRadius(3px);
+                    position: absolute;
+                    top: 18px;
+                    left: 18px;
+                    z-index: 99;
+                    display: inline-block;
+                    font-size: 13px;
+                    font-family: $default-heading-font;
+                    font-weight: 600;
+                    letter-spacing: -0.07em;
+                }
+    
+                .mkdf-ci-featured {
+                    display: inline-block;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    color: #fff;
+                    font-size: 20px;
+                    width: 47px;
+                    height: 47px;
+                    text-align: center;
+                    line-height: 53px;
+                    background-color: #1b1b1b;
+        
+                    > i {
+                        left: -1px;
+                        position: relative;
+                    }
+                }
+    
+                .mkdf-item-bottom-section {
+                    margin-top: 16px;
+                    position: relative;
+                }
+    
+                .mkdf-item-bottom-section-content {
+                    @include mkdfTableLayout();
+                }
+    
+                .mkdf-ci-title {
+                    margin: 0;
+                    @include mkdfTableCellLayout();
+                    width: 65%;
+                    text-align: left;
+                }
+    
+                .mkdf-ci-price {
+                    color: $first-main-color;
+                    font-size: 22px;
+                    font-family: $default-heading-font;
+                    font-weight: 500;
+                    text-align: right;
+                    @include mkdfTableCellLayout();
+                    width: 35%;
+                }
+            }
+        }
+    }
+}

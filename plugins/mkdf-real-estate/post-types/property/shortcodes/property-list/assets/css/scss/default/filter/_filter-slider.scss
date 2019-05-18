@@ -1,0 +1,43 @@
+.mkdf-property-list-holder {
+    .mkdf-property-list-filter-part {
+        .mkdf-range-slider-response-holder {
+            margin: 0 0 7px;
+            color: #000;
+        }
+
+        .mkdf-range-slider-wrapper {
+            height: 42px;
+            margin-bottom: 14px;
+            width: calc(100% - 10px);
+        }
+        .mkdf-range-slider {
+            position: relative;
+            height: 2px;
+            background-color: #d8d8d8;
+            top: 50%;
+            margin-top: -2px;
+            .ui-slider-range {
+                position: absolute;
+                display: block;
+                height: 100%;
+                background-color: $second-main-color;
+                z-index: 1;
+            }
+            .ui-slider-handle {
+                position: absolute;
+                top: -8px;
+                height: 18px;
+                width: 18px;
+                background-color: $second-main-color;
+                margin: 0 0 0 -1px;
+                cursor: pointer;
+                outline: 0;
+                z-index: 2;
+                @include mkdfBorderRadius(50%);
+                &:last-child {
+                    @include mkdfTransform(translateX(-50%));
+                }
+            }
+        }
+    }
+}

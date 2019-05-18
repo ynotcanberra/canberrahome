@@ -1,0 +1,128 @@
+/* Standard item layout start */
+.mkdf-re-compare-items-holder {
+    &.mkdf-items-standard {
+        .mkdf-ci-item {
+            margin-bottom: 25px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+            &.mkdf-with-opacity {
+                opacity: 0.5;
+            }
+
+            .mkdf-item-top-section {
+                position: relative;
+            }
+
+            .mkdf-ci-image {
+                line-height: 0;
+                overflow: hidden;
+
+                img {
+                    @include mkdfTransform(scale(1));
+                    @include mkdfTransition(transform 0.3s ease-out);
+                    backface-visibility: hidden;
+                }
+            }
+            .mkdf-item-top-section-content {
+                position: absolute;
+                top: 0;
+                left: 0;
+                display: inline-block;
+                width: 100%;
+                height: 100%;
+                box-sizing: border-box;
+                padding: 0;
+            }
+            .mkdf-item-top-section-content-inner {
+                @include mkdfTableLayout();
+            }
+            .mkdf-item-info-top {
+                @include mkdfTableCellLayout();
+                vertical-align: top;
+            }
+            
+            .mkdf-re-add-to-compare {
+                display: inline-block;
+                position: absolute;
+                right: 18px;
+                top: 18px;
+                z-index: 10;
+                color: #fff;
+                font-size: 14px;
+                width: 24px;
+                height: 24px;
+                line-height: 29px;
+                text-align: center;
+                background-color: rgba(#000, 0.6);
+                @include mkdfBorderRadius(3px);
+                > * {
+                    margin-left: -1px;
+                }
+            }
+    
+            .mkdf-ci-statuses {
+                color: #fff;
+                background-color: rgba(0, 0, 0, 0.6);
+                padding: 1px 8px 0;
+                box-sizing: border-box;
+                @include mkdfBorderRadius(3px);
+                position: absolute;
+                top: 18px;
+                left: 18px;
+                z-index: 99;
+                display: inline-block;
+                font-size: 13px;
+                font-family: $default-heading-font;
+                font-weight: 600;
+                letter-spacing: -0.07em;
+            }
+    
+            .mkdf-ci-featured {
+                display: inline-block;
+                position: absolute;
+                left: 0;
+                top: 0;
+                color: #fff;
+                font-size: 20px;
+                width: 47px;
+                height: 47px;
+                text-align: center;
+                line-height: 53px;
+                background-color: #1b1b1b;
+        
+                > i {
+                    left: -1px;
+                    position: relative;
+                }
+            }
+
+            .mkdf-item-bottom-section {
+                margin-top: 16px;
+                position: relative;
+            }
+            
+            .mkdf-item-bottom-section-content {
+                @include mkdfTableLayout();
+            }
+
+            .mkdf-ci-title {
+                margin: 0;
+                @include mkdfTableCellLayout();
+                width: 65%;
+                text-align: left;
+            }
+    
+            .mkdf-ci-price {
+                color: $first-main-color;
+                font-size: 22px;
+                font-family: $default-heading-font;
+                font-weight: 500;
+                text-align: right;
+                @include mkdfTableCellLayout();
+                width: 35%;
+            }
+        }
+    }
+}
+/* Standard item layout end */

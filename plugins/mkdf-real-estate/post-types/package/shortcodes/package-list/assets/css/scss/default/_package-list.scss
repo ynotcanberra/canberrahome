@@ -1,0 +1,136 @@
+.mkdf-package-list-holder {
+    .mkdf-package-item {
+        display: inline-block;
+        text-align: center;
+        box-sizing: border-box;
+    }
+    .mkdf-package-item-inner {
+        position: relative;
+        box-sizing: border-box;
+        @include mkdfBorderRadius(2px);
+        border: 1px solid $default-border-color;
+        background-color: #fff;
+    }
+
+    .mkdf-package-title {
+        border-bottom: 1px solid $default-border-color;
+        position: relative;
+        height: 100%;
+
+        h5 {
+            padding: 22px 0 17px;
+            margin: 0;
+        }
+    }
+
+    .mkdf-package-price {
+        border-bottom: 1px solid $default-border-color;
+        padding: 18px 0 10px;
+
+        .mkdf-price-value {
+            color: $first-main-color;
+            font-family: $default-heading-font;
+            font-size: 46px;
+            font-weight: 600;
+            line-height: 1em;
+            vertical-align: middle;
+            right: 8px;
+            position: relative;
+        }
+
+        .mkdf-price-currency {
+            color: $first-main-color;
+            font-family: $default-heading-font;
+            font-size: 18px;
+            font-weight: 600;
+            line-height: 1em;
+            vertical-align: middle;
+            left: -4px;
+            top: -2px;
+            position: relative;
+        }
+    }
+
+    .mkdf-package-icon {
+        color: $first-main-color;
+        padding-right: 5px;
+    }
+
+    .mkdf-package-content {
+        position: relative;
+        text-align: left;
+        padding: 26px 27px 21px;
+        font-weight: 400;
+
+        > div {
+            padding: 6px 0;
+        }
+    }
+
+    .mkdf-package-action {
+        position: relative;
+        padding: 0 30px 34px;
+
+        .mkdf-btn {
+            padding: 10px 8px 6px;
+            width: 100%
+        }
+    }
+
+    .mkdf-package-badge {
+        position: absolute;
+        @include mkdfTransform(rotate(90deg));
+        top: 16px;
+        left: -18px;
+        background-color: #ff212b;
+        color: #fff;
+        font-size: 12px;
+        width: 64px;
+        text-align: center;
+        padding: 4px 0 3px;
+    }
+
+    /***** List Columns Style - begin *****/
+
+    &:not(.mkdf-pckgl-one-column) {
+
+        li {
+            float: left;
+        }
+    }
+
+    $gallery_columns_number: ('two', 'three', 'four', 'five', 'six');
+
+    @for $i from 0 to length($gallery_columns_number) {
+        &.mkdf-pckgl-#{nth($gallery_columns_number,$i+1)}-columns {
+
+            li {
+                width: 100% / ($i+2);
+            }
+
+            @if ($i > 1) { // set different break point for four, five and six columns
+                @media only screen and (min-width: $ipad-landscape-plus-pixel) {
+
+                    li {
+
+                        &:nth-child(#{$i+2}n+1) {
+                            clear: both;
+                        }
+                    }
+                }
+            } @else {
+                @media only screen and (min-width: $phone-landscape-plus-pixel) {
+
+                    li {
+
+                        &:nth-child(#{$i+2}n+1) {
+                            clear: both;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    /***** List Columns Style - end *****/
+}

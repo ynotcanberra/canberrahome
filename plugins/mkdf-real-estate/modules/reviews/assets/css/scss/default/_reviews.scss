@@ -1,0 +1,93 @@
+/* Reviews section start */
+.mkdf-property-reviews {
+    padding: 35px 0 60px;
+
+    h4 {
+        margin: 0;
+    }
+
+    .mkdf-comments-title {
+        display: none;
+    }
+
+    .mkdf-property-stars-wrapper {
+        padding: 0 0 0 15px;
+
+        .mkdf-property-stars {
+            color: $second-main-color;
+            font-size: 11px;
+            letter-spacing: 0.15em;
+        }
+    }
+
+    .mkdf-property-reviews-summary {
+        display: inline-block;
+    }
+
+    .mkdf-comment-holder {
+        .mkdf-comment-text .mkdf-comment-name {
+            display: inline-block;
+            float: none;
+            vertical-align: middle;
+        }
+        .mkdf-review-rating {
+            vertical-align: middle;
+            margin-left: 12px;
+
+            .mkdf-rating-inner {
+                font-size: 11px;
+                letter-spacing: 0.15em;
+                color: $second-main-color;
+            }
+        }
+    }
+
+    .comment-form {
+        position: relative;
+    }
+
+    .mkdf-rating-form-title-holder {
+        display: inline-block;
+        position: absolute;
+        right: 0;
+        top: -50px;
+    }
+
+    .mkdf-comment-form-rating {
+        label {
+            display: inline-block;
+            vertical-align: middle;
+            position: relative;
+            top: 2px;
+            color: $default-heading-color;
+        }
+        .mkdf-comment-rating-box {
+            float: none;
+            vertical-align: middle;
+            display: inline-block;
+            margin-left: 10px;
+
+            .mkdf-star-rating {
+                position: relative;
+                display: inline-block;
+                vertical-align: middle;
+                font-family: 'ElegantIcons';
+                color: #c8c8c8;
+                font-size: 11px;
+                letter-spacing: 0.15em;
+                cursor: pointer;
+                overflow: hidden;
+                @include mkdfTransition(all 0.3s ease);
+
+                &.active {
+                    color: $second-main-color;
+                }
+
+                &:before {
+                    content: '\e033';
+                }
+            }
+        }
+    }
+}
+/* Reviews section start */

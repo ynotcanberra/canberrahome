@@ -1,0 +1,19 @@
+.mkdf-re-profile-searches-holder {
+    .mkdf-property-search {
+        display: inline-block;
+        vertical-align: middle;
+        button {
+            background: transparent;
+            display: inline-block;
+            outline: 0;
+            box-shadow: none;
+            padding: 0;
+            -webkit-appearance: none;
+            border: 0;
+            cursor: pointer;
+        }
+    }
+    .mkdf-undo-query-save {
+        cursor: pointer;
+    }
+}

@@ -1,0 +1,1 @@
+<p class="mkdf-re-ci-not-found"><?php esc_html_e( 'No properties found to compare.', 'mkdf-real-estate' ); ?></p>

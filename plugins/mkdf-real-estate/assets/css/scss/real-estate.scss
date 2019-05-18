@@ -1,0 +1,70 @@
+/* ==========================================================================
+   Global partials
+   ========================================================================== */
+@import '../../../../../themes/zuhaus/assets/css/scss/variables';
+@import '../../../../../themes/zuhaus/assets/css/scss/mixins';
+
+@import '../../../post-types/**/assets/css/scss/default/**/**/*.scss';
+@import '../../../modules/**/assets/css/scss/default/*.scss';
+
+//$checkbox-size: 15px;
+//$checkbox-border-width: 1px;
+//%checkbox-style {
+//    position: relative;
+//    margin: 8px 0;
+//    line-height: 1;
+//    input[type=checkbox] {
+//        width: $checkbox-size;
+//        height: $checkbox-size;
+//        max-height: $checkbox-size;
+//        position: relative;
+//        display: inline-block;
+//        vertical-align: top;
+//        top: 0;
+//        left: 0;
+//        margin: 0;
+//    }
+//    input[type=checkbox] + label {
+//        display: inline-block;
+//        pointer-events: none;
+//        cursor: pointer;;
+//        position: absolute;
+//        top: 0;
+//        left: 0;
+//        line-height: 0;
+//    }
+//    input[type=checkbox] + label span.mkdf-label-text {
+//        padding-left: 10px;
+//        display: inline-block;
+//        line-height: $checkbox-size;
+//        color: $default-heading-color;
+//    }
+//    input[type=checkbox] + label .mkdf-label-view {
+//        display: inline-block;
+//        width: $checkbox-size;
+//        height: $checkbox-size;
+//        box-sizing: border-box;
+//        vertical-align: top;
+//        cursor: pointer;
+//        border: $checkbox-border-width solid $default-border-color;
+//        background-color: $default-background-color;
+//        border-radius: 2px;
+//        &:hover {
+//            cursor: pointer;
+//        }
+//    }
+//    input[type=checkbox] + label .mkdf-label-view:after {
+//        content: '';
+//        width: $checkbox-size / 2 - $checkbox-border-width;
+//        height: $checkbox-size / 2 - $checkbox-border-width;
+//        position: absolute;
+//        top: ($checkbox-size - ($checkbox-size / 2 - $checkbox-border-width)) / 2;
+//        left: ($checkbox-size - ($checkbox-size / 2 - $checkbox-border-width)) / 2;
+//        background-color: $second-main-color;
+//        opacity: 0;
+//        @include mkdfTransition(opacity 0.3s ease-in-out);
+//    }
+//    input[type=checkbox]:checked + label .mkdf-label-view:after {
+//        opacity: 1;
+//    }
+//}

@@ -1,0 +1,250 @@
+/* ==========================================================================
+   Property shortcode responsive style - begin
+   ========================================================================== */
+
+
+@include laptop-landscape-large {
+
+    .mkdf-property-list-holder {
+
+        &.mkdf-pl-masonry {
+
+            $masonry_columns_number: ('five');
+
+            @for $i from 0 to length($masonry_columns_number) {
+                &.mkdf-pl-#{nth($masonry_columns_number,$i+1)}-columns {
+                    $column_width: 100%/4;
+
+                    article,
+                    .mkdf-pl-grid-sizer {
+                        width: $column_width;
+                    }
+
+                    article {
+
+                        &.mkdf-pl-masonry-large-width,
+                        &.mkdf-pl-masonry-large-width-height {
+                            width: $column_width * 2;
+                        }
+                    }
+                }
+            }
+        }
+        &.mkdf-pl-with-map {
+            .mkdf-property-list-map-part {
+                width: 38%;
+            }
+            .mkdf-property-list-items-part {
+                width: 62%;
+                padding: 0 25px 55px;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: $ipad-landscape-plus-pixel) and (max-width: $laptop-landscape-medium) {
+    .mkdf-property-list-holder {
+        &.mkdf-pl-with-map {
+        &.mkdf-pl-gallery {
+
+                $gallery_columns_number: ('four', 'five');
+
+                @for $i from 0 to length($gallery_columns_number) {
+                    &.mkdf-pl-#{nth($gallery_columns_number,$i+1)}-columns {
+                        $gallery_item_size: 100% / 3;
+
+                        article {
+                            width: $gallery_item_size;
+                        }
+
+                        @media only screen and (min-width: $ipad-landscape-plus-pixel) {
+
+                            article {
+
+                                &:nth-child(3n+1) {
+                                    clear: both;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            &.mkdf-pl-masonry {
+
+                $masonry_columns_number: ('three', 'four', 'five');
+
+                @for $i from 0 to length($masonry_columns_number) {
+                    &.mkdf-pl-#{nth($masonry_columns_number,$i+1)}-columns {
+                        $column_width: 100% / 2;
+
+                        article,
+                        .mkdf-pl-grid-sizer {
+                            width: $column_width;
+                        }
+
+                        article {
+
+                            &.mkdf-pl-masonry-large-width,
+                            &.mkdf-pl-masonry-large-width-height {
+                                width: $column_width * 2;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: $ipad-landscape-plus-pixel) and (max-width: $laptop-landscape) {
+    .mkdf-property-list-holder {
+        &.mkdf-pl-no-map {
+            &.mkdf-pl-gallery {
+                $gallery_columns_number: ('four', 'five');
+
+                @for $i from 0 to length($gallery_columns_number) {
+                    &.mkdf-pl-#{nth($gallery_columns_number,$i+1)}-columns {
+                        $gallery_item_size: 100% / 3;
+
+                        article {
+                            width: $gallery_item_size;
+                        }
+
+                        @media only screen and (min-width: $ipad-landscape-plus-pixel) {
+
+                            article {
+
+                                &:nth-child(3n+1) {
+                                    clear: both;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            &.mkdf-pl-masonry {
+
+                $masonry_columns_number: ('four', 'five');
+
+                @for $i from 0 to length($masonry_columns_number) {
+                    &.mkdf-pl-#{nth($masonry_columns_number,$i+1)}-columns {
+                        $column_width: 100% / 3;
+
+                        article,
+                        .mkdf-pl-grid-sizer {
+                            width: $column_width;
+                        }
+
+                        article {
+
+                            &.mkdf-pl-masonry-large-width,
+                            &.mkdf-pl-masonry-large-width-height {
+                                width: $column_width * 2;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include ipad-landscape {
+
+    .mkdf-property-list-holder {
+
+        &.mkdf-pl-with-map {
+            .mkdf-property-list-map-part {
+                width: 100%;
+                position: relative;
+                #mkdf-re-multiple-map-holder {
+                    height: 500px;
+                }
+            }
+            .mkdf-property-list-items-part {
+                width: 100%;
+                padding: 55px 35px;
+            }
+        }
+
+        &.mkdf-pl-gallery {
+
+            $gallery_columns_number: ('three', 'four', 'five');
+
+            @for $i from 0 to length($gallery_columns_number) {
+                &.mkdf-pl-#{nth($gallery_columns_number,$i+1)}-columns {
+
+                    article {
+                        width: 50%;
+                    }
+
+                    @media only screen and (min-width: $phone-landscape-plus-pixel) {
+
+                        article {
+
+                            &:nth-child(2n+1) {
+                                clear: both;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &.mkdf-pl-masonry {
+
+            $masonry_columns_number: ('three', 'four', 'five');
+
+            @for $i from 0 to length($masonry_columns_number) {
+                &.mkdf-pl-#{nth($masonry_columns_number,$i+1)}-columns {
+
+                    article,
+                    .mkdf-pl-grid-sizer {
+                        width: 50%;
+                    }
+
+                    article {
+
+                        &.mkdf-pl-masonry-large-width,
+                        &.mkdf-pl-masonry-large-width-height {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include phone-landscape {
+
+    .mkdf-property-list-holder {
+
+        &.mkdf-pl-gallery {
+
+            article {
+                width: 100% !important; // !important is set to override all other stronger selectors
+            }
+        }
+
+        &.mkdf-pl-masonry {
+
+            $masonry_columns_number: ('two', 'three', 'four', 'five');
+
+            @for $i from 0 to length($masonry_columns_number) {
+                &.mkdf-pl-#{nth($masonry_columns_number,$i+1)}-columns {
+
+                    article,
+                    .mkdf-pl-grid-sizer {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+/* ==========================================================================
+   Property shortcode responsive style - end
+   ========================================================================== */
