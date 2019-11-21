@@ -1,0 +1,37 @@
+.mkdf-property-list-holder {
+    .mkdf-property-list-filter-part {
+        .mkdf-property-filter-button {
+            margin-right: 15px;
+        }
+
+        .mkdf-property-query-section {
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .mkdf-query-result {
+            display: inline-block;
+            margin-left: 10px;
+        }
+
+        .mkdf-result-message {
+            padding-right: 10px;
+        }
+
+        .mkdf-undo-query-save {
+            cursor: pointer;
+        }
+
+        .mkdf-undo-query-message {
+            padding-right: 3px;
+        }
+        .mkdf-reset-filter-section {
+            line-height: 44px;
+            position: absolute;
+            right: 0;
+            top: 0;
+            display: block;
+            vertical-align: middle;
+        }
+    }
+}

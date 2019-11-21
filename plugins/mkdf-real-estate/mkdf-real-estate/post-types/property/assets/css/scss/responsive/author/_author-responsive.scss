@@ -1,0 +1,31 @@
+/* Author archive template for property roles responsive */
+.mkdf-re-author-holder {
+
+    @include ipad-landscape {
+        .mkdf-author-image {
+            width: 200px;
+        }
+
+        .mkdf-author-info {
+            width: calc(100% - 200px);
+        }
+    }
+
+    @include phone-landscape {
+        .mkdf-author-image {
+            float: none;
+            width: 100%;
+            margin-bottom: 50px;
+        }
+        .mkdf-author-info {
+            float: none;
+            width: 100%;
+            padding-left: 0;
+        }
+        .mkdf-re-author-footer {
+            &.mkdf-author-social {
+                margin-top: 30px;
+            }
+        }
+    }
+}

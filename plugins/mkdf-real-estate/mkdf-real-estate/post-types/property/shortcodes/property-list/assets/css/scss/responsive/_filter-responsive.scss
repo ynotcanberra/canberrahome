@@ -1,0 +1,123 @@
+/* Property filter section responsive css - start */
+.mkdf-property-list-holder {
+    .mkdf-property-list-filter-part {
+        @media only screen and (min-width: $ipad-landscape-plus-pixel) and (max-width: $laptop-landscape-large) {
+            .mkdf-filter-section-csp {
+                .mkdf-section-size {
+                    width: 35%;
+                }
+                .mkdf-section-price {
+                    width: 40%;
+                }
+            }
+        }
+        @include laptop-landscape-large {
+            .mkdf-filter-features-holder {
+                .mkdf-feature-item {
+                    width: 33.33%;
+                }
+            }
+        }
+        @include ipad-portrait {
+            .mkdf-filter-row {
+                display: block;
+                width: 100%;
+                margin-bottom: 0;
+            }
+            .mkdf-filter-section {
+                &.mkdf-section-type,
+                &.mkdf-section-features,
+                &.mkdf-section-price {
+                    padding: 0;
+                }
+            }
+            .mkdf-filter-section-3,
+            .mkdf-filter-section-6,
+            .mkdf-filter-section-9 {
+                display: block;
+                width: 100%;
+                border-left: 0;
+                margin-bottom: 25px;
+                padding: 0;
+            }
+            .mkdf-filter-section-action {
+                margin-bottom: 25px;
+            }
+            .mkdf-filter-specification-holder  {
+                .mkdf-quantity-buttons {
+                    display: block;
+                }
+            }
+        }
+
+        @include phone-landscape {
+            .mkdf-filter-features-holder {
+                .mkdf-feature-item {
+                    width: 50%;
+                }
+            }
+        }
+
+        @include phone-portrait {
+            .mkdf-filter-features-holder {
+                .mkdf-feature-item {
+                    width: 100%;
+                    float: none;
+                }
+            }
+
+            .mkdf-property-filter-button {
+                margin-right: 0;
+                margin-bottom: 15px;
+                width: 100%;
+            }
+
+            .mkdf-property-query-section {
+                width: 100%;
+            }
+
+            .mkdf-property-save-search-button {
+                width: 100%;
+            }
+            .mkdf-query-result {
+                margin-left: 0;
+                margin-top: 10px;
+            }
+            .mkdf-reset-filter-section {
+                position: initial;
+            }
+        }
+    }
+
+    &.mkdf-pl-active-filter-hidden {
+        &.mkdf-pl-type-set {
+            .mkdf-property-list-filter-part {
+                @include ipad-portrait {
+                    .mkdf-section-status .select2 {
+                        width: 100% !important;
+                    }
+                }
+            }
+        }
+
+        &.mkdf-pl-city-set {
+            .mkdf-property-list-filter-part {
+                @include ipad-portrait {
+                    .mkdf-section-size {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+
+        &.mkdf-pl-feature-set {
+            .mkdf-property-list-filter-part {
+                @include ipad-portrait {
+                    .mkdf-section-spec {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}

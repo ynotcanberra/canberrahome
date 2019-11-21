@@ -1,0 +1,120 @@
+.mkdf-property-city-list-holder {
+    .mkdf-pcl-item {
+        display: inline-block;
+        text-align: center;
+        cursor: pointer;
+        box-sizing: border-box;
+    }
+    .mkdf-pcl-item-inner {
+        position: relative;
+
+        &:hover {
+            .mkdf-pcl-item-image img {
+                @include mkdfTransform(scale(1.02));
+            }
+        }
+    }
+    .mkdf-pcl-item-image {
+        line-height: 0;
+        overflow: hidden;
+
+        img {
+            @include mkdfTransform(scale(1));
+            @include mkdfTransition(transform 0.3s ease-out);
+            backface-visibility: hidden;
+        }
+
+        &:after {
+            @include mkdfAbsoluteHolderLayout();
+            content: '';
+            background-color: rgba(0,0,0, .4);
+        }
+    }
+    .mkdf-pcl-item-content {
+        @include mkdfAbsoluteHolderLayout();
+    }
+    .mkdf-pcl-item-content-outer {
+        @include mkdfTableLayout();
+    }
+    .mkdf-pcl-item-content-inner {
+        @include mkdfTableCellLayout();
+        padding: 18px 5px 0;
+    }
+    .mkdf-pcl-item-link {
+        @include mkdfAbsoluteHolderLayout();
+    }
+
+    .mkdf-pcl-item-count {
+        font-size: 50px;
+        font-family: $default-heading-font;
+        font-weight: 400;
+        color: #fff;
+        margin: 0 0 8px;
+    }
+
+    .mkdf-pcl-item-label,
+    .mkdf-pcl-item-county {
+        font-weight: 400;
+        color: #fff;
+    }
+
+    .mkdf-pcl-item-separator {
+        line-height: 0;
+        span {
+            display: inline-block;
+            height: 1px;
+            width: 72px;
+            background-color: $second-main-color;
+            margin: 18px 0;
+        }
+    }
+
+    .mkdf-pcl-item-title {
+        margin: 0;
+        color: #fff;
+    }
+
+    /***** List Columns Style - begin *****/
+
+    &:not(.mkdf-pcl-one-column) {
+
+        li {
+            float: left;
+        }
+    }
+
+    $gallery_columns_number: ('two', 'three', 'four', 'five', 'six');
+
+    @for $i from 0 to length($gallery_columns_number) {
+        &.mkdf-pcl-#{nth($gallery_columns_number,$i+1)}-columns {
+
+            li {
+                width: 100% / ($i+2);
+            }
+
+            @if ($i > 1) { // set different break point for five and six columns
+                @media only screen and (min-width: $ipad-landscape-plus-pixel) {
+
+                    li {
+
+                        &:nth-child(#{$i+2}n+1) {
+                            clear: both;
+                        }
+                    }
+                }
+            } @else {
+                @media only screen and (min-width: $ipad-portrait-plus-pixel) {
+
+                    li {
+
+                        &:nth-child(#{$i+2}n+1) {
+                            clear: both;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    /***** List Columns Style - end *****/
+}

@@ -1,0 +1,24 @@
+.mkdf-property-list-holder {
+    .mkdf-property-list-filter-part {
+       .mkdf-filter-city-holder {
+           position: relative;
+           label {
+               display: block;
+               margin: 0 0 7px;
+               color: $default-heading-color;
+           }
+
+           .mkdf-filter-property-icon {
+               position: absolute;
+               top: 28px;
+               left: 0;
+               font-size: 20px;
+               display: inline-block;
+               height: 42px;
+               line-height: 47px;
+               width: 40px;
+               text-align: center;
+           }
+       }
+    }
+}

@@ -1,0 +1,96 @@
+/* Author archive template for property roles */
+.mkdf-re-author-holder {
+
+    /* Info section styles */
+    .mkdf-re-author-info-section {
+        margin-bottom: 56px;
+    }
+
+    .mkdf-author-image {
+        display: inline-block;
+        float: left;
+        width: 308px;
+    }
+
+    .mkdf-author-info {
+        display: inline-block;
+        float: left;
+        width: calc(100% - 308px);
+        box-sizing: border-box;
+        padding-left: 35px;
+    }
+
+    .mkdf-re-author-title-holder {
+        margin-bottom: 16px;
+        .mkdf-re-author-title {
+            margin: 0;
+        }
+        .mkdf-re-author-description {
+            margin: 0;
+            font-weight: 400;
+            color: #6f6e6e;
+
+            &.mkdf-author-role {
+                text-transform: capitalize;
+            }
+        }
+    }
+
+    .mkdf-re-author-image {
+        line-height: 0;
+    }
+
+    .mkdf-re-author-description-holder {
+        margin-bottom: 15px;
+        p {
+            margin: 0;
+        }
+    }
+
+    .mkdf-re-author-contact {
+        .mkdf-re-contact-item {
+            margin-bottom: 2px;
+            .mkdf-contact-icon {
+                font-size: 13px;
+                color: $default-heading-color;
+                vertical-align: middle;
+                margin-right: 10px;
+            }
+        }
+    }
+
+    .mkdf-re-author-footer {
+        &.mkdf-author-social {
+            margin-top: 59px;
+            .mkdf-re-social-label {
+                margin: 0 0 10px 0;
+            }
+            .mkdf-contact-social-icons {
+                a {
+                    margin-right: 12px;
+                    &:hover {
+                        color: $second-main-color;
+                    }
+                }
+            }
+        }
+
+        &.mkdf-author-agents {
+            margin-top: 32px;
+            h5 {
+                margin: 0 0 17px;
+            }
+            img {
+                border-radius: 100%;
+            }
+        }
+    }
+
+    /* List section styles */
+    .mkdf-re-author-properties-section {
+        margin-bottom: 80px;
+        .mkdf-re-properties-title {
+            margin: 0 0 40px;
+        }
+    }
+}

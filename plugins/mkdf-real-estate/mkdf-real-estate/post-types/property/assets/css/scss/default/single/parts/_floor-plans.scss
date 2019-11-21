@@ -1,0 +1,33 @@
+/* Floor plans section start */
+.mkdf-property-floor-plans {
+    .mkdf-accordion-holder {
+        .mkdf-accordion-title-content {
+            @include mkdfTableLayout();
+        }
+        .mkdf-accordion-title-value {
+            @include mkdfTableCellLayout();
+            width: 40%;
+        }
+        .mkdf-accordion-title-info {
+            @include mkdfTableCellLayout();
+            width: 60%;
+            text-align: right;
+            font-family: $default-text-font;
+        }
+
+        .mkdf-accordion-title-item {
+            padding: 0 0 0 23px;
+
+            .mkdf-accordion-size-label,
+            .mkdf-accordion-room-label,
+            .mkdf-accordion-bath-label {
+                font-weight: 400;
+            }
+        }
+
+        .mkdf-accordion-image {
+            margin: 30px 0 0;
+        }
+    }
+}
+/* Floor plans section end */

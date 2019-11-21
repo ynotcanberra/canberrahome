@@ -1,0 +1,234 @@
+/* ==========================================================================
+    Real Estate map - start
+========================================================================== */
+#mkdf-re-single-map-holder {
+	height: 500px;
+}
+
+#mkdf-re-multiple-map-holder {
+    height: 100%;
+}
+
+.mkdf-map-marker-holder {
+	@include mkdfTransform(translate(-50%, -100%));
+	z-index: 10;
+    &.active {
+        z-index: 11;
+    }
+
+    .mkdf-map-marker {
+        width: 50px;
+        height: auto;
+        position: relative;
+        border-radius: 5px;
+        @include mkdfTransition(all 0.15s ease-out);
+
+        .mkdf-map-marker-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+
+            > i,
+            > span {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                margin: 0 auto;
+                width: 100%;
+                height: 100%;
+                line-height: 65px;
+                border-radius: 2px;
+                font-size: 20px;
+                text-align: center;
+                @include mkdfTransition(all 0.1s ease-out);
+				display: none;
+            }
+
+            .mkdf-pin-custom-image {
+                background-size: cover;
+                background-position: center;
+            }
+
+            .mkdf-map-marker-botom{
+                position: absolute;
+                bottom: 0;
+            }
+
+            svg {
+                width: 100%;
+                height: auto;
+
+				path {
+					@include mkdfTransition(all 0.2s ease);
+				}
+            }
+        }
+
+        &.mkdf-pin-icon {
+            &>:before{
+                content: '';
+                position: absolute;
+                bottom: -7px;
+                left: calc(50% - 6px);
+                width: 0;
+                height: 0;
+                border-left: 7px solid transparent;
+                border-right: 7px solid transparent;
+                border-top: 7px solid #bdbdbd;
+            }
+            .mkdf-map-marker-inner {
+                background-color: #bdbdbd;
+                color: #fff;
+            }
+        }
+
+        &:hover {
+			svg {
+				path.house-color {
+					fill: #fff;
+				}
+			}
+        }
+
+    }
+
+	.mkdf-info-window {
+		background-color: #fff;
+		text-align: center;
+		min-width: 385px;
+		display: none;
+		position: absolute;
+		top: -10px;
+		z-index: 10;
+		left: -26px;
+		border-radius: 2px;
+		border: 1px solid #c4c4c4;
+		@include mkdfTransform(translate(0, -100%));
+		@include mkdfTransition(opacity 0.3s ease);
+		box-shadow: 3px 4px 10px 0 rgba(0, 0, 0, 0.15);
+	}
+
+	.mkdf-info-window-inner {
+		@include mkdfTableLayout();
+
+		> a {
+			position: absolute;
+			top:0;
+			left:0;
+			height: 100%;
+			width: 100%;
+			z-index: 100;
+			&:hover {
+				~ .mkdf-info-window-details h5 {
+					color:$first-main-color;
+					@include mkdfTransition(color .5s cubic-bezier(0.28, 0.75, 0.25, 1));
+				}
+			}
+		}
+
+		.mkdf-info-window-details {
+			@include mkdfTableCellLayout();
+			width: 75%;
+			text-align: left;
+			padding: 0 11px;
+
+			h5 {
+				margin: 0;
+				@include mkdfTransition(color .25s ease);
+			}
+
+			p {
+				font-family: $default-text-font;
+				font-size: 13px;
+				line-height: 1.8em;
+				margin: 0;
+			}
+
+		}
+
+		.mkdf-info-window-image {
+			@include mkdfTableCellLayout();
+			width: 25%;
+			padding: 9px;
+
+			img {
+				display: block;
+				width: 100%;
+				height: auto;
+				image-rendering: optimizeQuality;
+				@include mkdfTransition(opacity .4s ease);
+				-webkit-backface-visibility:hidden;
+				border-right: 1px solid $default-border-color;
+				padding-right: 9px;
+			}
+
+		}
+
+		&:after {
+			content: '';
+			position: absolute;
+			bottom: -7px;
+			left: 45px;
+			width: 10px;
+			height: 10px;
+			background-color: #fff;
+			border-top: 1px solid #c4c4c4;
+			border-left: 1px solid #c4c4c4;
+			@include mkdfTransform(rotate(-135deg));
+		}
+
+	}
+
+	&.active {
+		z-index: 500;
+
+		svg {
+			path.house-color {
+				fill: #fff;
+			}
+		}
+	}
+
+}
+
+.mkdf-cluster-marker {
+	width: 50px;
+	height: auto;
+
+	.mkdf-cluster-marker-inner {
+		position: relative;
+
+		.mkdf-cluster-marker-number {
+			position: absolute;
+			top: -2px;
+			left: 0;
+			right: 0;
+			margin: 0 auto;
+			text-align: center;
+			font-size: 30px;
+			font-weight: 600;
+			color: $default-heading-color;
+			font-family: $default-text-font;
+			border-radius: 1px;
+			@include mkdfTransition(all 0.2s ease);
+		}
+	}
+
+	svg {
+		width: 100%;
+		height: auto;
+	}
+
+	&:hover {
+		.mkdf-cluster-marker-inner {
+			.mkdf-cluster-marker-number {
+				color: #fff;
+			}
+		}
+	}
+
+}
+/* ==========================================================================
+    Real Estate map - end
+========================================================================== */

@@ -1,0 +1,35 @@
+.mkdf-re-profile-all-properties-holder {
+    .mkdf-re-profile-property-item {
+        border-bottom: 1px solid $default-border-color;
+        padding: 25px 0;
+        box-sizing: border-box;
+
+        .mkdf-re-profile-property-item-image {
+            display: inline-block;
+            position: relative;
+            vertical-align: top;
+            img {
+                display: block;
+                max-width: 150px;
+            }
+        }
+
+        .mkdf-re-profile-property-item-title {
+            display: inline-block;
+            position: relative;
+            vertical-align: top;
+            padding: 0 0 0 15px;
+
+            h4 {
+                margin: 5px 0 0;
+            }
+        }
+
+        .mkdf-re-profile-property-item-buttons {
+            display: inline-block;
+            position: relative;
+            vertical-align: top;
+            float: right;
+        }
+    }
+}

@@ -1,0 +1,98 @@
+.mkdf-property-type-list-holder {
+    &.mkdf-light-skin {
+        .mkdf-ptl-item-title {
+            color: #fff;
+        }
+        .mkdf-ptl-item {
+            border-color: rgba(#fff,0.3);
+        }
+    }
+
+    .mkdf-ptl-item {
+        display: inline-block;
+        text-align: center;
+        cursor: pointer;
+        border-left: 1px solid $default-border-color;
+        box-sizing: border-box;
+        &:first-child {
+            border-left: 0;
+        }
+    }
+    .mkdf-ptl-item-inner {
+        position: relative;
+        box-sizing: border-box;
+
+        &:hover {
+            .mkdf-ptl-item-image {
+                @include mkdfTransform(translateY(-5px));
+            }
+        }
+    }
+
+    .mkdf-ptl-item-image {
+        @include mkdfTransition(transform 0.15s ease-out);
+        @include mkdfTransform(translateY(0));
+    }
+    .mkdf-taxonomy-image {
+        line-height: 0;
+        display: block;
+        width: 50px;
+        margin: 0 auto;
+    }
+    .mkdf-taxonomy-icon {
+        display: block;
+    }
+    .mkdf-ptl-item-title {
+        display: block;
+        margin: 10px 0 0;
+    }
+    .mkdf-ptl-item-link {
+        @include mkdfAbsoluteHolderLayout();
+    }
+
+    /***** List Columns Style - begin *****/
+
+    &:not(.mkdf-ptl-one-column) {
+
+        li {
+            float: left;
+        }
+    }
+
+    $gallery_columns_number: ('two', 'three', 'four', 'five', 'six');
+
+    @for $i from 0 to length($gallery_columns_number) {
+        &.mkdf-ptl-#{nth($gallery_columns_number,$i+1)}-columns {
+
+            li {
+                width: 100% / ($i+2);
+            }
+
+            @if ($i > 1) { // set different break point for four, five and six columns
+                @media only screen and (min-width: $ipad-landscape-plus-pixel) {
+
+                    li {
+
+                        &:nth-child(#{$i+2}n+1) {
+                            clear: both;
+                            border-left: 0;
+                        }
+                    }
+                }
+            } @else {
+                @media only screen and (min-width: $phone-landscape-plus-pixel) {
+
+                    li {
+
+                        &:nth-child(#{$i+2}n+1) {
+                            clear: both;
+                            border-left: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    /***** List Columns Style - end *****/
+}

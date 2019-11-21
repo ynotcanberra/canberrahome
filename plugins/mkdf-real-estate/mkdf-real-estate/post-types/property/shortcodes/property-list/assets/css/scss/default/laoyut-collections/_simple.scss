@@ -1,0 +1,47 @@
+/* Simple item layout start */
+.mkdf-property-list-holder {
+    &.mkdf-pl-layout-simple {
+        .mkdf-pl-item {
+            margin: 0 0 18px;
+
+            .mkdf-item-content-wrapper {
+                @include mkdfTableLayout();
+            }
+            .mkdf-item-image-section {
+                @include mkdfTableCellLayout();
+                width: 44px;
+                vertical-align: top;
+            }
+
+            .mkdf-item-content {
+                @include mkdfTableCellLayout();
+                width: calc(100% - 44px);
+                padding-left: 13px;
+
+                .mkdf-pli-title {
+                    margin: 0;
+
+                    a {
+                        color: $default-heading-color;
+
+                        &:hover {
+                            color: $default-heading-color;
+                        }
+                    }
+                }
+            }
+
+            .mkdf-property-price {
+                font-weight: 400;
+                color: $first-main-color;
+            }
+
+            .mkdf-item-info,
+            .mkdf-property-types {
+                color: #bebebe;
+            }
+        }
+    }
+}
+
+/* Simple item layout end */

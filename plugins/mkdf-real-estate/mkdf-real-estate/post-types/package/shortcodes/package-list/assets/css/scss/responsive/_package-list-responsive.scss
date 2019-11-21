@@ -1,0 +1,36 @@
+@include ipad-landscape {
+
+    .mkdf-package-list-holder {
+
+        $gallery_columns_number: ('four', 'five', 'six');
+
+        @for $i from 0 to length($gallery_columns_number) {
+            &.mkdf-pckgl-#{nth($gallery_columns_number,$i+1)}-columns {
+
+                li {
+                    width: 33.33%;
+                }
+
+                @media only screen and (min-width: $phone-landscape-plus-pixel) {
+
+                    li {
+
+                        &:nth-child(3n+1) {
+                            clear: both;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include ipad-portrait {
+
+    .mkdf-package-list-holder {
+
+        li {
+            width: 100% !important; // !important is set to override all other stronger selectors
+        }
+    }
+}

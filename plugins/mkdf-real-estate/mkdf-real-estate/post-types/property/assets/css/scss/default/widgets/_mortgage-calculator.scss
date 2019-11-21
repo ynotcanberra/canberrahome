@@ -1,0 +1,31 @@
+.widget {
+    &.mkdf-mortgage-calculator-widget {
+        .mkdf-widget-title-holder {
+            display: block;
+            border-bottom: 1px solid $default-border-color;
+            padding: 18px 14px 11px;
+        }
+
+        .mkdf-mortgage-calculator-holder {
+            padding: 27px 14px 17px;
+        }
+
+        .mkdf-btn {
+            padding-left: 0;
+            padding-right: 0;
+            width: 100%;
+            margin: 5px 0 0;
+        }
+
+        input[type=text] {
+            width: 100%;
+            margin: 4px 0 11px;
+            padding: 11px 13px 9px;
+        }
+
+        .mkdf-mc-result-holder {
+            margin-top: 10px;
+            display: none;
+        }
+    }
+}

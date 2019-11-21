@@ -1,0 +1,29 @@
+/* Tags section start */
+.mkdf-property-tags {
+    .mkdf-tag-item {
+        display: inline-block;
+        float: left;
+        a {
+            padding: 10px 21px 8px;
+            margin: 0 9px 9px 0;
+            font-size: 12px;
+            line-height: 1em;
+            border: 1px solid $default-border-color;
+            box-sizing: border-box;
+            @include mkdfBorderRadius(3px);
+            display: inline-block;
+            @include mkdfTransition(color 0.2s ease-out, border-color 0.2s ease-out);
+            color: $default-text-color;
+
+            &:hover {
+                color: $first-main-color;
+                border-color: $first-main-color;
+            }
+        }
+    }
+
+    &.mkdf-property-label-items-holder {
+        padding: 35px 0 25px;
+    }
+}
+/* Tags section end */

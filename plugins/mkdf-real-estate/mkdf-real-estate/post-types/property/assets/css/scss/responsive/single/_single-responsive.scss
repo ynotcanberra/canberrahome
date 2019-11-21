@@ -1,0 +1,78 @@
+.mkdf-property-single-holder {
+    @media only screen and (min-width: $ipad-portrait-plus-pixel) and (max-width: $ipad-landscape) {
+        .mkdf-property-basic-info-inner {
+            display: inline-block;
+            width: 100%;
+        }
+        .mkdf-property-price {
+            display: inline-block;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        .mkdf-property-param {
+            display: inline-block;
+            width: 50%;
+            float: left;
+            box-sizing: border-box;
+            margin-bottom: 15px;
+        }
+        .mkdf-property-cta {
+            padding: 15px 0 0 0;
+            margin-top: 10px;
+            width: auto;
+            box-sizing: border-box;
+        }
+    }
+    @include ipad-portrait {
+        .mkdf-property-label-items-holder,
+        .mkdf-property-label-style,
+        .mkdf-property-items-style {
+            display: block;
+            box-sizing: border-box;
+            width: 100%;
+        }
+
+        .mkdf-property-label-style {
+            margin-bottom: 30px;
+        }
+
+        .mkdf-property-basic-info-holder {
+            .mkdf-property-basic-info-inner {
+                display: inline-block;
+                width: 100%;
+            }
+            .mkdf-property-price {
+                display: inline-block;
+                width: 100%;
+                margin-bottom: 20px;
+            }
+            .mkdf-property-param {
+                display: inline-block;
+                width: 50%;
+                float: left;
+                box-sizing: border-box;
+                margin-bottom: 10px;
+            }
+            .mkdf-property-cta {
+                padding: 15px 0 0 0;
+                margin-top: 10px;
+                width: auto;
+                box-sizing: border-box;
+            }
+        }
+    }
+    @include phone-portrait {
+        .mkdf-property-basic-info-holder {
+            .mkdf-property-param {
+                display: block;
+                width: 100%;
+            }
+        }
+
+        .mkdf-property-title-section {
+            .mkdf-title-inline-part {
+                margin-bottom: 15px;
+            }
+        }
+    }
+}

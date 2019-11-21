@@ -1,0 +1,70 @@
+.mkdf-property-single-holder {
+    .mkdf-property-label-items-holder {
+        @include mkdfTableLayout();
+        padding: 35px 0;
+        border-bottom: 1px solid $default-border-color;
+    }
+    .mkdf-property-label-style {
+        @include mkdfTableCellLayout();
+        vertical-align: top;
+        width: 27%;
+        h5 {
+            margin: 0;
+        }
+    }
+    .mkdf-property-items-style {
+        @include mkdfTableCellLayout();
+        vertical-align: top;
+        width: 73%;
+    }
+
+    .mkdf-label-items-item {
+        @include mkdfTableLayout();
+        padding: 0 0 19px;
+    }
+    .mkdf-label-items-label {
+        @include mkdfTableCellLayout();
+        vertical-align: top;
+        width: 50%;
+        font-weight: 300;
+        line-height: 1em;
+
+        .mkdf-label-text {
+            vertical-align: middle;
+        }
+        .mkdf-label-icon img {
+            display: inline-block;
+            vertical-align: middle;
+            width: 11px;
+            height: 11px;
+            margin-right: 10px;
+        }
+    }
+    .mkdf-label-items-value {
+        @include mkdfTableCellLayout();
+        vertical-align: top;
+        width: 50%;
+        font-weight: 600;
+        color: $default-heading-color;
+        line-height: 1em;
+    }
+
+    .mkdf-grid-col-6 {
+        @media only screen and (min-width: $ipad-landscape-plus-pixel) {
+            &:nth-child(2n+1) {
+                clear: both;
+            }
+        }
+    }
+
+    .mkdf-property-attachment a {
+        color: $first-main-color;
+
+    }
+}
+
+.single-property {
+    aside.mkdf-sidebar {
+        margin: 35px 0 60px;
+    }
+}

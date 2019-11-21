@@ -1,0 +1,14 @@
+/* Specification section start */
+.mkdf-property-specification {
+    .mkdf-additional-spec {
+        padding-top: 35px;
+        margin-top: 15px;
+        border-top: 1px solid $default-border-color;
+        box-sizing: border-box;
+    }
+
+    &.mkdf-property-label-items-holder {
+        padding: 35px 0 15px;
+    }
+}
+/* Specification section end */

@@ -1,0 +1,48 @@
+@include ipad-landscape {
+
+    .mkdf-property-type-list-holder {
+
+        $gallery_columns_number: ('four', 'five', 'six');
+
+        @for $i from 0 to length($gallery_columns_number) {
+            &.mkdf-ptl-#{nth($gallery_columns_number,$i+1)}-columns {
+
+                li {
+                    width: 33.33%;
+                }
+
+                @media only screen and (min-width: $phone-landscape-plus-pixel) {
+
+                    li {
+
+                        &:nth-child(3n+1) {
+                            clear: both;
+                            border-left: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include phone-landscape {
+
+    .mkdf-property-type-list-holder {
+
+        li {
+            width: 100% !important; // !important is set to override all other stronger selectors
+            border-left: 0 !important;
+            .mkdf-ptl-item-inner {
+                border-bottom: 1px solid $default-border-color;
+                padding-bottom: 10px;
+                margin-bottom: 10px;
+            }
+            &:last-child {
+                .mkdf-ptl-item-inner {
+                    border-bottom: 0;
+                }
+            }
+        }
+    }
+}

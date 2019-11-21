@@ -1,0 +1,61 @@
+/* Title section start */
+.mkdf-property-title-section {
+    box-sizing: border-box;
+    padding: 37px 0;
+    border-bottom: 1px solid $default-border-color;
+    .mkdf-property-title-inner {
+        @include mkdfTableLayout();
+    }
+    .mkdf-title-top,
+    .mkdf-title-bottom {
+        display: table-row;
+        width: 100%;
+        vertical-align: middle;
+    }
+    .mkdf-property-title-left {
+        @include mkdfTableCellLayout();
+        width: 70%;
+        vertical-align: top;
+    }
+    .mkdf-property-stars {
+        color: $second-main-color;
+    }
+    .mkdf-property-title-right {
+        @include mkdfTableCellLayout();
+        width: 30%;
+        text-align: right;
+        vertical-align: top;
+    }
+    h2 {
+        margin: 0 0 5px;
+    }
+    .mkdf-title-inline-part {
+        display: inline-block;
+        float: left;
+        vertical-align: middle;
+        box-sizing: border-box;
+        padding: 0 15px;
+        font-size: 13px;
+        color: $default-heading-color;
+        border-right: 1px solid $default-border-color;
+        &:first-child {
+            padding-left: 0;
+        }
+        &:last-child {
+            border-right: 0;
+        }
+    }
+    .mkdf-property-statuses {
+        font-size: 13px;
+        font-weight: 600;
+        padding: 1px 7px 0;
+        @include mkdfBorderRadius(3px);
+        background-color: $first-main-color;
+        color: #fff;
+    }
+    .mkdf-property-id-value {
+        font-weight: 700;
+        color: $default-heading-color;
+    }
+}
+/* Title section end */

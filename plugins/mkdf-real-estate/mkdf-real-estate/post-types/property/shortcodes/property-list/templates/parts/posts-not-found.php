@@ -1,0 +1,1 @@
+<p class="mkdf-pl-not-found"><?php esc_html_e( 'No properties found.', 'mkdf-real-estate' ); ?></p>

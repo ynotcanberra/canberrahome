@@ -1,0 +1,134 @@
+/* Standard item layout start */
+.mkdf-property-list-holder {
+    &.mkdf-pl-layout-standard {
+        .mkdf-pl-item {
+            .mkdf-pl-item-inner {
+                &:hover {
+                    .mkdf-pli-image img {
+                        @include mkdfTransform(scale(1.02));
+                    }
+                }
+            }
+
+            .mkdf-item-top-section {
+                position: relative;
+            }
+
+            .mkdf-pli-image {
+                line-height: 0;
+                overflow: hidden;
+
+                img {
+                    @include mkdfTransform(scale(1));
+                    @include mkdfTransition(transform 0.3s ease-out);
+                    backface-visibility: hidden;
+                }
+            }
+            .mkdf-item-top-section-content {
+                position: absolute;
+                top: 0;
+                left: 0;
+                display: inline-block;
+                width: 100%;
+                height: 100%;
+                box-sizing: border-box;
+                padding: 18px;
+            }
+            .mkdf-item-top-section-content-inner {
+                @include mkdfTableLayout();
+            }
+            .mkdf-item-info-top {
+                display: table-row;
+                width: 100%;
+                height: 30%;
+                vertical-align: top;
+            }
+            .mkdf-item-info-bottom {
+                display: table-row;
+                width: 100%;
+                height: 70%;
+                vertical-align: bottom;
+            }
+            .mkdf-item-info-bottom-left,
+            .mkdf-item-info-bottom-right {
+                @include mkdfTableCellLayout();
+                width: 50%;
+                vertical-align: bottom;
+            }
+            .mkdf-item-info-bottom-right {
+                text-align: right;
+            }
+
+            .mkdf-property-statuses {
+                color: #fff;
+                background-color: rgba(0, 0, 0, 0.6);
+                padding: 1px 8px 0;
+                box-sizing: border-box;
+                @include mkdfBorderRadius(3px);
+                position: relative;
+                z-index: 99;
+                display: inline-block;
+                font-size: 13px;
+                font-family: $default-heading-font;
+                font-weight: 600;
+                letter-spacing: -0.07em;
+            }
+
+            .mkdf-item-featured {
+                display: inline-block;
+                position: absolute;
+                right: 0;
+                top: 0;
+                color: $second-main-color;
+                font-size: 22px;
+                width: 28px;
+                height: 28px;
+                text-align: center;
+                line-height: 33px;
+                @include mkdfBorderRadius(50%);
+                background-color: rgba(0,0,0,0.7);
+            }
+
+            .mkdf-property-id {
+                color: #fff;
+                font-weight: 400;
+            }
+
+            .mkdf-property-price {
+                color: $default-heading-color;
+                background-color: #fff;
+                padding: 4px 6px 1px;
+                box-sizing: border-box;
+                display: inline-block;
+                @include mkdfBorderRadius(3px);
+                font-size: 18px;
+                font-family: $default-heading-font;
+                font-weight: 600;
+            }
+
+            .mkdf-item-bottom-section {
+                margin-top: 13px;
+            }
+
+            .mkdf-item-address {
+                font-weight: 400;
+                color: #bebebe;
+            }
+
+            .mkdf-item-info {
+                font-weight: 600;
+                color: $default-heading-color;
+            }
+
+            .mkdf-pli-title {
+                margin: 0;
+            }
+    
+            .mkdf-re-add-to-compare {
+                position: relative;
+                z-index: 10;
+            }
+        }
+    }
+}
+/* Standard item layout end */

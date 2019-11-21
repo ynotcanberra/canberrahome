@@ -1,0 +1,384 @@
+/* ==========================================================================
+   Property shortcode style - begin
+   ========================================================================== */
+
+.mkdf-property-list-holder {
+    @include mkdfRelativeHolderLayout();
+
+    /***** Article Global Style - begin *****/
+
+    article {
+        @include mkdfRelativeHolderLayout();
+        box-sizing: border-box;
+
+        .touch & {
+            cursor: pointer;
+        }
+
+        .mkdf-pl-item-inner {
+            @include mkdfRelativeHolderLayout();
+        }
+
+        .mkdf-pli-image {
+            @include mkdfRelativeHolderLayout();
+
+            img {
+                display: block;
+                width: 100%;
+            }
+        }
+
+        .mkdf-pli-link {
+            @include mkdfAbsoluteHolderLayout();
+        }
+    }
+
+    /***** Article Global Style - end *****/
+
+
+    /***** List With Map Style - begin *****/
+
+    &.mkdf-pl-with-map {
+        .mkdf-property-list-map-part {
+            width: 45%;
+            position: fixed;
+            top: 0;
+            right: 0;
+            z-index: 100;
+            height: 100%;
+        }
+        .mkdf-property-list-items-part {
+            float: left;
+            position: relative;
+            width: 55%;
+            padding: 0 35px 55px;
+            box-sizing: border-box;
+        }
+    }
+
+    /***** List With Map Style - end *****/
+
+    /***** List Columns Style - begin *****/
+
+    &.mkdf-pl-gallery {
+
+        &:not(.mkdf-pl-one-column) {
+
+            article {
+                float: left;
+            }
+        }
+
+        $gallery_columns_number: ('two', 'three', 'four', 'five');
+
+        @for $i from 0 to length($gallery_columns_number) {
+            &.mkdf-pl-#{nth($gallery_columns_number,$i+1)}-columns {
+
+                article {
+                    width: 100% / ($i+2);
+                }
+
+                @if ($i > 1) { // set different break point for four and five columns
+                    &.mkdf-pl-no-map {
+                        @media only screen and (min-width: $laptop-landscape-plus-pixel) {
+
+                            article {
+
+                                &:nth-child(#{$i+2}n+1) {
+                                    clear: both;
+                                }
+                            }
+                        }
+                    }
+                    &.mkdf-pl-with-map {
+                        @media only screen and (min-width: $laptop-landscape-medium-plus-pixel) {
+
+                            article {
+
+                                &:nth-child(#{$i+2}n+1) {
+                                    clear: both;
+                                }
+                            }
+                        }
+                    }
+                } @else {
+                    @media only screen and (min-width: $ipad-landscape-plus-pixel) {
+
+                        article {
+
+                            &:nth-child(#{$i+2}n+1) {
+                                clear: both;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    /***** List Columns Style - end *****/
+
+    /***** Masonry Columns Style - begin *****/
+
+    &.mkdf-pl-masonry {
+
+        .mkdf-pl-inner {
+            opacity: 0;
+        }
+
+        article,
+        .mkdf-pl-grid-sizer {
+            width: 100%;
+        }
+
+        .mkdf-pl-grid-gutter {
+            width: 0;
+        }
+
+        $masonry_columns_number: ('two', 'three', 'four', 'five');
+
+        @for $i from 0 to length($masonry_columns_number) {
+            &.mkdf-pl-#{nth($masonry_columns_number,$i+1)}-columns {
+                $column_width: 100%/($i+2);
+
+                article,
+                .mkdf-pl-grid-sizer {
+                    width: $column_width;
+                }
+
+                article {
+
+                    &.mkdf-pl-masonry-large-width,
+                    &.mkdf-pl-masonry-large-width-height {
+                        width: $column_width * 2;
+                    }
+                }
+            }
+        }
+
+        &.mkdf-pl-images-fixed {
+
+            article {
+
+                .mkdf-pl-item-inner,
+                .mkdf-item-top-section {
+                    height: 100%;
+                }
+
+                .mkdf-pli-image {
+                    height: 100%;
+
+                    img {
+                        height: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    /***** Masonry Columns Style - end *****/
+
+    /* No properties found */
+    &.mkdf-pl-properties-not-found {
+        .mkdf-pl-inner {
+            margin: 0;
+        }
+    }
+}
+
+/* ==========================================================================
+   Property shortcode style - end
+   ========================================================================== */
+/* ==========================================================================
+   Property standard pagination style - begin
+   ========================================================================== */
+
+.mkdf-property-list-holder {
+
+    &.mkdf-pl-pag-standard {
+
+        .mkdf-pl-inner {
+            opacity: 1;
+            @include mkdfTransition(opacity .2s ease-out);
+        }
+
+        &.mkdf-pl-pag-standard-animate {
+
+            .mkdf-pl-inner {
+                opacity: 0;
+            }
+        }
+    }
+}
+
+.mkdf-pl-standard-pagination {
+    @include mkdfRelativeHolderLayout();
+    margin: 20px 0 0;
+    clear: both;
+
+    ul {
+        @include mkdfRelativeHolderLayout();
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        text-align: center;
+
+        li {
+            position: relative;
+            display: inline-block;
+            vertical-align: top;
+            margin: 0 12px;
+            padding: 0;
+
+            a {
+                position: relative;
+                display: inline-block;
+                vertical-align: middle;
+                margin: 0;
+                padding: 0;
+            }
+
+            &.mkdf-pl-pag-active {
+
+                a {
+                    color: $first-main-color;
+                }
+            }
+
+            &.mkdf-pl-pag-prev,
+            &.mkdf-pl-pag-next {
+                position: absolute;
+                top: 0;
+
+                a {
+                    font-size: 30px;
+                    @include mkdfTransition(color .2s ease-out, opacity .2s ease-out);
+
+                    span {
+                        display: block;
+                        line-height: inherit;
+
+                        &:before {
+                            display: block;
+                            line-height: inherit;
+                        }
+                    }
+                }
+            }
+
+            &.mkdf-pl-pag-prev {
+                left: 0;
+
+                a {
+                    opacity: 0;
+                }
+            }
+
+            &.mkdf-pl-pag-next {
+                right: 0;
+
+                a {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+/* ==========================================================================
+   Property standard pagination style - end
+   ========================================================================== */
+
+/* ==========================================================================
+   Property load more pagination style - begin
+   ========================================================================== */
+
+.mkdf-pl-load-more-holder {
+    @include mkdfRelativeHolderLayout();
+
+    .mkdf-pl-load-more {
+        margin: 40px 0 0;
+        text-align: center;
+    }
+}
+/* ==========================================================================
+   Property load more pagination style - end
+   ========================================================================== */
+
+/* ==========================================================================
+   Property loading element style - begin
+   ========================================================================== */
+
+.mkdf-pl-loading {
+    position: relative;
+    display: none;
+    width: 100%;
+    margin: 40px 0 20px;
+    color: $default-heading-color;
+    text-align: center;
+
+    &.mkdf-standard-pag-trigger {
+        position: absolute;
+        bottom: 100px;
+        left: 0;
+    }
+
+    &.mkdf-showing {
+        display: block;
+    }
+
+    > div {
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+        width: 14px;
+        height: 14px;
+        margin: 0 3px;
+        background-color: $default-heading-color;
+        border-radius: 100%;
+        @include mkdfAnimation(sk-bouncedelay 1.4s infinite ease-in-out both);
+    }
+
+    .mkdf-pl-loading-bounce1 {
+        -webkit-animation-delay: -0.32s;
+        -moz-animation-delay: -0.32s;
+        animation-delay: -0.32s;
+    }
+
+    .mkdf-pl-loading-bounce2 {
+        -webkit-animation-delay: -0.16s;
+        -moz-animation-delay: -0.16s;
+        animation-delay: -0.16s;
+    }
+}
+
+@-webkit-keyframes sk-bouncedelay {
+    0%, 80%, 100% {
+        -webkit-transform: scale(0);
+    }
+    40% {
+        -webkit-transform: scale(1.0);
+    }
+}
+
+@-moz-keyframes sk-bouncedelay {
+    0%, 80%, 100% {
+        -moz-transform: scale(0);
+    }
+    40% {
+        -moz-transform: scale(1.0);
+    }
+}
+
+@keyframes sk-bouncedelay {
+    0%, 80%, 100% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+    }
+    40% {
+        -webkit-transform: scale(1.0);
+        transform: scale(1.0);
+    }
+}
+/* ==========================================================================
+   Property loading element style - end
+   ========================================================================== */

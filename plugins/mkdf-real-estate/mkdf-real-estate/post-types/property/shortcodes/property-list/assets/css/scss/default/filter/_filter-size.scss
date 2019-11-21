@@ -1,0 +1,45 @@
+.mkdf-property-list-holder {
+    .mkdf-property-list-filter-part {
+        .mkdf-filter-size-holder {
+            label {
+                display: block;
+                margin: 0 0 7px;
+                color: $default-heading-color;
+            }
+            .mkdf-input-min-size,
+            .mkdf-input-max-size {
+                display: inline-block;
+                float: left;
+                position: relative;
+                width: 49%;
+                margin-bottom: 14px;
+
+                input {
+                    margin-bottom: 0;
+                    padding: 0 30px 0 10px;
+                    width: 100%;
+                    height: 42px;
+                    line-height: 42px;
+                }
+            }
+            .mkdf-input-min-size {
+                margin-right: 2%;
+            }
+            .mkdf-sufix {
+                position: absolute;
+                line-height: 42px;
+                right: 12px;
+                top: 0;
+            }
+        }
+    }
+    &.mkdf-pl-active-filter-hidden {
+        &.mkdf-pl-city-set {
+            .mkdf-property-list-filter-part {
+                .mkdf-section-size {
+                    width: 50%;
+                }
+            }
+        }
+    }
+}

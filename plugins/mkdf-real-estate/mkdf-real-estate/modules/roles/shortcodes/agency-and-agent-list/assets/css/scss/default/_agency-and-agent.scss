@@ -1,0 +1,99 @@
+.mkdf-agency-agent-list {
+    .mkdf-aal-item {
+        display: inline-block;
+        box-sizing: border-box;
+    }
+
+    .mkdf-aal-item-inner {
+        text-align: center;
+        position: relative;
+    }
+
+    .mkdf-aal-user-link {
+        position: absolute;
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+    }
+
+    .mkdf-aal-image{
+    	margin-bottom: 21px;
+
+    	img{
+    		vertical-align: middle;
+            @include mkdfBorderRadius(50%);
+            padding: 0 19%;
+            box-sizing: border-box;
+    	}
+    }
+
+    .mkdf-aal-item-title {
+        margin: 0;
+    }
+
+    .mkdf-aal-item-desc {
+        margin: 2px 0 12px;
+    }
+
+    .mkdf-aal-item-social{
+    	position: relative;
+        z-index: 20;
+    	.mkdf-icon-shortcode{
+    		padding: 0 8px;
+
+            a {
+                color: $default-text-color;
+
+                &:hover {
+                    color: $first-main-color;
+                }
+            }
+    	}
+    }
+
+    /***** List Columns Style - begin *****/
+
+    &:not(.mkdf-aal-one-column) {
+
+        li {
+            float: left;
+        }
+    }
+
+    $gallery_columns_number: ('two', 'three', 'four', 'five', 'six');
+
+    @for $i from 0 to length($gallery_columns_number) {
+        &.mkdf-aal-#{nth($gallery_columns_number,$i+1)}-columns {
+
+            li {
+                width: 100% / ($i+2);
+            }
+
+            @if ($i > 1) { // set different break point for five and six columns
+                @media only screen and (min-width: $ipad-landscape-plus-pixel) {
+
+                    li {
+
+                        &:nth-child(#{$i+2}n+1) {
+                            clear: both;
+                        }
+                    }
+                }
+            } @else {
+                @media only screen and (min-width: $ipad-portrait-plus-pixel) {
+
+                    li {
+
+                        &:nth-child(#{$i+2}n+1) {
+                            clear: both;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    /***** List Columns Style - end *****/
+}

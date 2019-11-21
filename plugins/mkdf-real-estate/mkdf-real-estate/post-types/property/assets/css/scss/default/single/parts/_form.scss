@@ -1,0 +1,51 @@
+.mkdf-property-enquiry-holder{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.25);
+    z-index: 1002;
+    display: none;
+}
+.mkdf-property-enquiry-inner{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    @include mkdfTransform(translateY(-50%));
+    width: 330px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 36px;
+
+    .mkdf-property-enquiry-form{
+        label{
+            font-family: $default-text-font;
+            font-size: 13px;
+            text-transform: uppercase;
+
+            &:after{
+                content: "*";
+                color: $first-main-color;
+                margin-left: 5px;
+            }
+        }
+
+        textarea{
+            max-width: 100%;
+        }
+
+        .mkdf-property-single-enquiry-submit {
+            width: 100%;
+        }
+    }
+
+    .mkdf-property-enquiry-close{
+        position: absolute;
+        top: -2%;
+        right: -2%;
+        font-size: 24px;
+        cursor: pointer;
+    }
+}

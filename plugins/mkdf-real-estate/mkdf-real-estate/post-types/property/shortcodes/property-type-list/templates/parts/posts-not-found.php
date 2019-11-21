@@ -1,0 +1,1 @@
+<p class="mkdf-ptl-not-found"><?php esc_html_e( 'Sorry, no property types found.', 'mkdf-real-estate' ); ?></p>
