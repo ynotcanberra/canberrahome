@@ -1,0 +1,85 @@
+/*
+Theme Name: Zuhaus
+Theme URI: http://zuhaus.mikado-themes.com
+Description: A Modern Real Estate and Rental Theme
+Author: Mikado Themes
+Author URI: http://themeforest.net/user/mikado-themes
+Text Domain: zuhaus
+Tags: one-column, two-columns, three-columns, four-columns, left-sidebar, right-sidebar, custom-menu, featured-images, flexible-header, post-formats, sticky-post, threaded-comments, translation-ready
+Version: 1.2
+License: GNU General Public License
+License URI: licence/GPL.txt
+
+CSS changes can be made in files in the /css/ folder. This is a placeholder file required by WordPress, so do not delete it.
+
+*/
+
+
+.mkdf-property-param+.mkdf-property-param+.mkdf-property-param .mkdf-property-icon{height:32px;background:url(https://canberrahome.com.au/wp-content/uploads/2019/04/29-512-1.png) center no-repeat;}
+.mkdf-property-param+.mkdf-property-param+.mkdf-property-param+.mkdf-property-param .mkdf-property-icon{background:none;}
+/*.mkdf-property-basic-info-holder .mkdf-property-param .mkdf-property-icon img[alt="Property accommodation icon"]{display:none;}*/
+.mkdf-property-title-section h2{font-size:20px ;}
+.mkdf-property-title-section .mkdf-property-statuses{font-size:20px;}
+.Ceiling.height,.From.center,.Area.size,.Garages.size,.Garages,.Total.floors,.Floor{display:none !important;}
+.mkdf-title-holder{background-size:cover;}
+.mkdf-property-list-holder.mkdf-pl-layout-standard .mkdf-pl-item .mkdf-item-top-section{min-height:206px;}
+.mkdf-title-holder.mkdf-has-bg-image{    background-image: url(https://cbrhome.flywheelstaging.com/wp-content/uploads/2017/10/blog-post-title-img.jpg);}
+.woocommerce-order h2,
+.cart_totals h2{font-size:25px;}
+#customer_details abbr{color:red;font-size: 15px;}
+.woocommerce-notice,
+.woocommerce-message{color:green;}
+.mkdf-woocommerce-page.woocommerce-order-received .woocommerce ul.order_details li strong{font-weight:700 !important;}
+.mkdf-mobile-header .mkdf-mobile-nav ul li a{font-size:15px !important;}
+
+
+.mkdf-membership-input-holder #property_id{display:none;}
+label[for="mkdf-feature-55"],
+input[name="property_county[]"],
+label[for="property_county"],
+label[for="property_id"],
+label[for="discount_price"],
+input[name="discount_price"],
+label[for="price_label"],
+input[name="price_label"],
+label[for="size_label"],
+input[name="size_label"],
+label[for="size_label_position"],
+select[name="size_label_position"],
+label[for="total_floors"],
+input[name="total_floors"],
+label[for="floor"],
+input[name="floor"],
+label[for="ceiling_height"],
+input[name="ceiling_height"],
+label[for="parking"],
+input[name="parking"],
+label[for="property_from_center"],
+input[name="property_from_center"],
+label[for="garages"],
+input[name="garages"],
+label[for="garages_size"],
+input[name="garages_size"],
+label[for="garages_size"],
+input[name="garages_size"],.leasingterm_templates_parts{display:none;}
+.displaynone{display:none;}
+
+.Parking span .mkdf-label-icon img { display:none!important; }
+.Parking .mkdf-label-icon {
+    display: inline-block;
+    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+   /*background: url(https://canberrahome.com.au/wp-content/uploads/2019/04/29-512-1.png) center no-repeat;*/
+	background: url(https://canberrahome.com.au/wp-content/plugins/mkdf-real-estate/assets/img/icon-parking.png) center no-repeat;
+   /* background-size: 100% 100%;*/
+	background-size: 11px 11px;
+}
+.mkdf-grid-col-6.Parking:sdsds .mkdf-label-icon img{display:none;}
+.mkdf-google-login-holder{display:none;}
+/*.lnr{color:red;}
+*/
+@media screen and (max-width: 400px) {
+.page-id-1422 .wpb_column.vc_column_container.vc_col-sm-4{    width: 50%; display: inline-block;}
+	.mkdf-content{margin-top:0px !important;}
+}

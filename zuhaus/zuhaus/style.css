@@ -64,9 +64,21 @@ label[for="garages_size"],
 input[name="garages_size"],.leasingterm_templates_parts{display:none;}
 .displaynone{display:none;}
 
-
-
-
+.Parking span .mkdf-label-icon img { display:none!important; }
+.Parking .mkdf-label-icon {
+    display: inline-block;
+    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+    /*background: url(http://cbrhome.flywheelstaging.com/wp-content/uploads/2019/04/29-512-1.png) center no-repeat;*/
+	background: url(https://cbrhome.flywheelstaging.com/wp-content/plugins/mkdf-real-estate/assets/img/icon-parking.png) center no-repeat;
+   /* background-size: 100% 100%;*/
+	background-size: 11px 11px;
+}
+.mkdf-grid-col-6.Parking:sdsds .mkdf-label-icon img{display:none;}
+.mkdf-google-login-holder{display:none;}
+/*.lnr{color:red;}
+*/
 @media screen and (max-width: 400px) {
 .page-id-1422 .wpb_column.vc_column_container.vc_col-sm-4{    width: 50%; display: inline-block;}
 	.mkdf-content{margin-top:0px !important;}
